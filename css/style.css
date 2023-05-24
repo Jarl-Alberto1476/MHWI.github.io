@@ -1,0 +1,312 @@
+:root {
+    /* Colores */
+    --primario: #A0BEDE;
+    --secundario: #C6C4C0;
+    /* Fuentes */
+    --titulo: 'Vollkorn', serif;
+    --nombre: 'Castoro Titling', cursive;
+    --especie: 'Spectral', serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Globales */
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: var(--especie);
+    font-weight: 500;
+    color: var(--primario);
+}
+
+span {
+    color: var(--secundario);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 { 
+        font-size: 3.2rem;
+    }
+
+    h3 { 
+        font-size: 2.4rem;
+    }
+} 
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Escudo Logo */
+.logo__Escudo {
+    width: 80%;
+    margin: auto;
+    padding: 3.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.titulo {
+    font-family: var(--titulo);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 10rem;
+    cursor: pointer;
+}
+
+@media (min-width: 1025px) {
+    .logo__Escudo {
+        flex-direction: row;
+    }
+
+    .logo {
+        width: 15rem;
+        cursor: pointer;
+    }
+
+    .titulo {
+        font-family: var(--titulo);
+        font-size: 8rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+} 
+
+/* navegacion */
+.contenedor__navegacion {
+    border-top: 1px solid #e1e1e1;
+
+}
+
+.navegacion {
+    font-size: 3rem;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navegacion a {
+    color: black;
+    font-family: var(--titulo);
+}
+
+#formbusq {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+#busqueda {
+    font-size: 2rem;
+    font-family: var(--nombre);
+    border-radius: 10px;
+}
+
+.boton3 {
+    color: black !important;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 0 2rem;
+    background: #318aac;
+    border: 3px solid;
+    border-color: #318aac;
+    transition: all 1s ease;
+    position: relative;
+    border-radius: 15px;
+    margin: 1rem;
+}
+
+@media (min-width: 768px) {
+    .navegacion { 
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #formbusq {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+    
+    #busqueda {
+        border-radius: 10px;
+    }
+
+    .boton3 {
+        color: #ced4d7 !important;
+        font-size: 2.5rem;
+        font-weight: 500;
+        padding: 0 2rem;
+        background: rgba(0, 0, 0, 0);
+        border: 3px solid;
+        border-color: #318aac;
+        transition: all 1s ease;
+        position: relative;
+        border-radius: 15px;
+        margin: 0 0.5rem;
+    }
+    
+    .boton3:hover {
+        background: #318aac;
+        color: black !important;
+    }
+} 
+
+
+/* Inicio Slider */
+.info-slider {
+    display: flex;
+    margin: 3rem;
+    flex-direction: column;
+}
+
+.slider {
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 0 4rem;
+    justify-content: space-between;
+}
+
+.slider__izquierdo,
+.slider__derecho {
+    display: none;
+}
+
+.slider__izquierdo img,
+.slider__derecho img {
+   display: none;
+}
+
+.slider__inner {
+    width: 100%;
+}
+
+.slider__inner img {
+    width: 100%;
+}
+
+@media (min-width: 1025px) {
+    .info-slider {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .slider {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        max-width: 1200px;
+        padding: 0 4rem;
+        justify-content: space-between;
+    }
+    
+    .slider__izquierdo,
+    .slider__derecho {
+        display: block;
+        width: 5%;
+    }
+    
+    .slider__izquierdo img,
+    .slider__derecho img {
+        display: block;
+        width: 100%;
+    }
+    
+    .slider__inner {
+        width: 100%;
+    }
+    
+    .slider__inner img {
+        width: 100%;
+    }
+
+    .monstruo__container { 
+        flex-grow: 1;
+    }
+
+} 
+
+/* Listado de Monstruos */
+.listado__sect {
+    text-align: center;
+    margin: 4rem;
+}
+
+.listado__monstruos {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile { 
+    display: block;
+}
+
+.desktop { 
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .listado__monstruos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .desktop { 
+        display: block;
+    }
+
+    .mobile { 
+        display: none;
+    }
+} 
