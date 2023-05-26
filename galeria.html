@@ -1,77 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Monster Hunter World: INFO</title>
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Spectral:ital,wght@0,500;1,200;1,400&family=Vollkorn&display=swap"
-            rel="stylesheet" />
-        <link rel="stylesheet" href="css/style.css" />
-    
-    </head>
-    
-    <body>
-        <div class="logo__Escudo">
-            <picture>
-                <source srcset="build/img/logo2-removebg-preview.webp" />
-                <img src="build/img/logo2-removebg-preview.png" type="image/webp" class="logo" alt="Logo_Escudo" />
-            </picture>
-            <div class="neon flickering">
-                <h1 class="titulo">Monster Hunter World <span class="""flickering-w> Información</span>  </h1>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monster Hunter World: INFO</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Spectral:ital,wght@0,500;1,200;1,400&family=Vollkorn&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+    <div class="logo__Escudo">
+        <picture>
+            <source srcset="build/img/logo2-removebg-preview.webp" />
+            <img src="build/img/logo2-removebg-preview.png" type="image/webp" class="logo" alt="Logo_Escudo" />
+        </picture>
+        <div class="neon flickering">
+            <h1 class="titulo">Monster Hunter World <span class="""flickering-w> Información</span>  </h1>
             </div>
         </div>
 
-        <div class="contenedor__navegacion">
-            <navbar class="navegacion container">
-                <a href="index.html">Inicio </a>
-                <a href="galeria.html">Galeria </a>
-                <a href="contacto.html">Contacto </a>
-                <form action="" id="formbusq">
-                    <input class="" type="text" placeholder="Buscar Monstruo..." name="" id="busqueda" />
-                    <button type="submit" class="boton3">Buscar</button>
-                </form>
-            </navbar>
+        <div class=" contenedor__navegacion">
+                    <navbar class="navegacion container">
+                        <a href="index.html">Inicio </a>
+                        <a href="galeria.html">Galeria </a>
+                        <a href="contacto.html">Contacto </a>
+                        <form action="" id="formbusq">
+                            <input class="" type="text" placeholder="Buscar Monstruo..." name="" id="busqueda" />
+                            <button type="submit" class="boton3">Buscar</button>
+                        </form>
+                    </navbar>
         </div>
-    <!--Galeria-->
-    <div class="container listado__sect">
-        <h2>Galeria</h2>
-    </div>
-    <section class="galeria container">
-        <picture>
-            <source srcset="build/img/36.webp" type="webp">
-            <img src="build/img/36.jpg" alt="legiana" />
-            <h4>Legiana</h4>
-        </picture>
-        <picture>
-            <source srcset="build/img/brachydios.webp" type="webp">
-            <img src="build/img/brachydios.jpg" alt="brachydios" />
-            <h4>Brachydios</h4>
-        </picture>
-        <picture>
-            <source srcset="build/img/kirin.jpg" type="webp">
-            <img src="build/img/kirin.jpg" alt="kirin">
-            <h4>Kirin</h4>
-        </picture>
-        <picture>
-            <source srcset="build/img/dodogama.webp" type="webp">
-            <img src="build/img/dodogama.jpg" alt="dodogama">
-            <h4>Dodogama</h4>
-        </picture>
-        <picture>
-            <source srcset="build/img/lunastra.webp" type="webp">
-            <img src="build/img/lunastra.jpg" alt="lunastra">
-            <h4>Lunastra</h4>
-        </picture>
-        <picture>
-            <source srcset="build/img/rajang.webp" type="webp">
-            <img src="build/img/rajang.jpg" alt="rajang">
-            <h4>Rajang</h4>
-        </picture>
-    </section>
+        <!--Galeria-->
+        <div class="container listado__sect">
+            <h2>Galeria</h2>
+        </div>
+        <section class="galeria container">
+            <picture class="card">
+                <source srcset="build/img/36.webp" type="webp">
+                <img src="build/img/36.jpg" alt="legiana">
+                <div class="card__monstruo">
+                    <h4 class="nombre__monstruo">Legiana</h4>
+                </div>
+            </picture>
+            <picture class="card">
+                <source srcset="build/img/brachydios.webp" type="webp">
+                <img src="build/img/brachydios.jpg" alt="brachydios">
+                <div class="card__monstruo">
+                    <h4 class="nombre__monstruo">Brachydios</h4>
+                </div>
+
+            </picture>
+            <picture class="card">
+                <source srcset="build/img/kirin.jpg" type="webp">
+                <img src="build/img/kirin.jpg" alt="kirin">
+                <div class="card__monstruo">
+                    <h4 class="nombre__monstruo">Kirin</h4>
+                </div>
+            </picture>
+            <picture class="card">
+                <source srcset="build/img/dodogama.webp" type="webp">
+                <img src="build/img/dodogama.jpg" alt="dodogama">
+                <div class="card__monstruo">
+                    <h4 class="nombre__monstruo">Dodogama</h4>
+                </div>
+            </picture>
+            <picture class="card">
+                <source srcset="build/img/lunastra.webp" type="webp">
+                <img src="build/img/lunastra.jpg" alt="lunastra">
+                <div class="card__monstruo">
+                    <h4 class="nombre__monstruo">Lunastra</h4>
+                </div>
+
+            </picture>
+            <picture class="card">
+                <source srcset="build/img/rajang.webp" type="webp">
+                <img src="build/img/rajang.jpg" alt="rajang">
+                <div class="card__monstruo">
+                    <h4 class="nombre__monstruo">Rajang</h4>
+                </div>
+            </picture>
+        </section>
 </body>
+
 </html>

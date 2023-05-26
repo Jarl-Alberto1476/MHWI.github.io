@@ -103,12 +103,11 @@ h3 {
 span {
     letter-spacing: 10px;
     animation: flicker 3s infinite;
-    color: #00bbff;
+    color: #07B604;
 }
 .neon { 
     text-align: center;
-    
-    text-shadow: 5px 5px 39px rgb(0, 255, 255);
+    text-shadow: 5px 5px 39px rgb(88, 250, 86);
 }
 
 .flickering-w { 
@@ -160,6 +159,7 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -235,6 +235,7 @@ span {
     display: flex;
     margin: 3rem;
     flex-direction: column;
+
 }
 
 .slider {
@@ -263,10 +264,11 @@ span {
     width: 100%;
 }
 
-@media (min-width: 1025px) {
+
+@media (min-width: 768px) {
     .info-slider {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .slider {
@@ -297,10 +299,6 @@ span {
     .slider__inner img {
         width: 100%;
     }
-
-    .monstruo__container {
-        flex-grow: 1;
-    }
 }
 
 /* Listado de Monstruos */
@@ -316,10 +314,12 @@ span {
 
 .mobile {
     display: block;
+    text-align: center;
 }
 
 .desktop {
     display: none;
+
 }
 
 @media (min-width: 768px) {
@@ -330,6 +330,8 @@ span {
 
     .desktop {
         display: block;
+        text-align: center;
+        justify-content: space-between;
     }
 
     .mobile {
@@ -338,14 +340,74 @@ span {
 }
 
 /* Galeria */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px 1fr));
+    gap: 1rem; 
+    justify-content: center;
+}
+.card { 
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card__monstruo { 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    color: #fff;
+    position: absolute;
+    background-color: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1.5s;
+}
+
+.card:hover .card__monstruo { 
+    right: 0;
+}
+
+.nombre__monstruo { 
+    text-transform: uppercase;
+    font-family: var(--nombre);
+    font-size: 2rem;
+}
+
+
 
 @media (min-width: 768px) {
     .galeria {
         display: flex;
-        gap: 1rem;
+        gap: 1rem; 
     }
 
+  
 
 
+    
+    .card__monstruo { 
+        width: 100%;
+        height: 83%;
+        top: 0;
+        right: -100%;
+        color: #fff;
+        position: absolute;
+        background-color: #1f3d4738;
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: 1.5s;
+    }
 
 }

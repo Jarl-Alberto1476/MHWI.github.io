@@ -1,61 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monster Hunter World: INFO</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Spectral:ital,wght@0,500;1,200;1,400&family=Vollkorn&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <div class="logo__Escudo">
-      <picture>
-        <source srcset="build/img/logo2-removebg-preview.webp" />
-        <img
-          src="build/img/logo2-removebg-preview.png"
-          type="image/webp"
-          class="logo"
-          alt="Logo_Escudo"
-        />
-      </picture>
-      <h1 class="titulo">Monster Hunter Informacion</h1>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monster Hunter World: INFO</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Spectral:ital,wght@0,500;1,200;1,400&family=Vollkorn&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <div class="contenedor__navegacion">
-      <navbar class="navegacion container">
-        <a href="index.html">Inicio </a>
-        <a href="#">Inicio </a>
-        <form action="" id="formbusq">
-          <input
-            class=""
-            type="text"
-            placeholder="Buscar Monstruo..."
-            name=""
-            id="busqueda"
-          />
+<body>
+  <div class="logo__Escudo">
+    <picture>
+      <source srcset="build/img/logo2-removebg-preview.webp" />
+      <img src="build/img/logo2-removebg-preview.png" type="image/webp" class="logo" alt="Logo_Escudo" />
+    </picture>
+    <h1 class="titulo">Monster Hunter Informacion</h1>
+  </div>
+
+  <div class="contenedor__navegacion">
+    <navbar class="navegacion container">
+      <a href="index.html">Inicio </a>
+      <a href="galeria.html">Galeria </a>
+      <a href="contacto.html">Contacto </a>
+      <form action="" id="formbusq">
+          <input class="" type="text" placeholder="Buscar Monstruo..." name="" id="busqueda" />
           <button type="submit" class="boton3">Buscar</button>
-        </form>
-      </navbar>
-    </div>
-    <div class="monstruo__container container">
-      
-      <picture id="imagenContainer"></picture>
-      <p id="nombreMonstruo"></p>
-      <p id="especieMonstruo"></p>
-      <p id="descripcionMonstruo"></p>
-      <h2>Debilidades</h2>
-      <ul id="debilidadesMonstruo"></ul>
+      </form>
+  </navbar>
+  </div>
+  <div class="monstruo__container container">
+    <picture id="imagenContainer"></picture>
+    <p id="nombreMonstruo"></p>
+    <p id="especieMonstruo"></p>
+    <p id="descripcionMonstruo"></p>
+    <h2>Debilidades</h2>
+    <ul id="debilidadesMonstruo"></ul>
+  </div>
 
-    </div>
+  <script src="js/monsterInfo.js"></script>
+</body>
 
-    <script src="js/monsterInfo.js"></script>
-  </body>
 </html>
