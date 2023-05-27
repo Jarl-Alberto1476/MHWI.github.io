@@ -1,5 +1,4 @@
 // Codigo para hacer Slider automatico y con controles manuales
-
 let imagenes = [
     "build/img/great jagras.webp",
     "build/img/jyurathodus.webp",
@@ -42,4 +41,16 @@ sliderIzquierda.addEventListener("click", function () {
     clearInterval();
     moverIzquierda();
     intervalo = setInterval(moverIzquierda, 6000)
+});
+
+
+//validaciones de formularios
+
+const email = document.getElementById("email");
+const message = document.getElementById("message");
+const form = document.getElementById("form");
+const alerta = document.getElementById("alerta");
+
+form.addEventListener("submit", e => { 
+    
 });

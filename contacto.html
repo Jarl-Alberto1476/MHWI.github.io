@@ -26,7 +26,7 @@
     </div><!-- logo y titulo-->
 
     <div class="contenedor__navegacion">
-        <navbar class="navegacion container">
+        <navbar class="navegacion contenedor">
             <a href="index.html">Inicio</a>
             <a href="galeria.html">Galeria </a>
             <a href="contacto.html">Contacto </a>
@@ -42,17 +42,18 @@
             Si tienes algun comentario para mejorar la página por favor hazmelo saber
         </h1>
         <div class="formulario">
-            <form action="https://formspree.io/f/myyaabdz" method="POST">
+            <form action="https://formspree.io/f/myyaabdz" method="POST" id="form">
                 <label class="form__label">
                     Tu email:
-                    <input class="form__input" type="email" name="email" placeholder="email">
+                    <input class="form__input" type="email" id="email" name="email" placeholder="email">
                 </label>
                 <label class="form__label">
                     Tu mensaje:
-                    <textarea class="form__input form__text" name="message" placeholder="Escribe tu mensaje..."></textarea>
+                    <textarea class="form__input form__text" id="message" name="message" placeholder="Escribe tu mensaje..."></textarea>
                 </label>
                 <!-- your other form fields go here -->
                 <button class="enviar" type="submit">Enviar Comentario</button>
+        
             </form>
         </div>
     </section>
