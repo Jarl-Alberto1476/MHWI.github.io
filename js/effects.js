@@ -42,15 +42,3 @@ sliderIzquierda.addEventListener("click", function () {
     moverIzquierda();
     intervalo = setInterval(moverIzquierda, 6000)
 });
-
-
-//validaciones de formularios
-
-const email = document.getElementById("email");
-const message = document.getElementById("message");
-const form = document.getElementById("form");
-const alerta = document.getElementById("alerta");
-
-form.addEventListener("submit", e => { 
-    
-});
