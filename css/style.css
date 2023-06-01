@@ -276,7 +276,6 @@ span {
     position: absolute;
     content: "";
     inset: 0;
-    background-color: rgba(0, 0, 0, .7);
 }
 .inicio__info{
     color: wheat;
