@@ -161,13 +161,13 @@ span {
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
     .logo__Escudo {
         flex-direction: row;
     }
 
     .logo {
-        width: 15rem;
+        width: 20%;
     }
 
     .titulo {
