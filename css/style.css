@@ -80,23 +80,34 @@ body {
 
 /* Escudo Logo */
 .logo__Escudo {
-    width: 80%;
     margin: auto;
-    padding: 3.5rem 0;
+    padding: .5rem 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
+
+.logo { 
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .logo { 
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+} 
 
 .titulo {
     font-family: var(--titulo);
     text-align: center;
     margin: 0 auto;
-}
-
-.logo {
-    width: 10rem;
-    cursor: pointer;
 }
 
 span {
@@ -162,17 +173,9 @@ span {
 }
 
 @media (min-width: 768px) {
-    .logo__Escudo {
-        flex-direction: row;
-    }
-
-    .logo {
-        width: 25rem;
-    }
-
     .titulo {
         font-family: var(--titulo);
-        font-size: 8rem;
+        font-size: 6rem;
         text-align: center;
         margin: 0 auto;
     }
@@ -276,11 +279,13 @@ span {
     position: absolute;
     content: "";
     inset: 0;
+    background-color: rgba(0, 0, 0, .7);
 }
 .inicio__info{
     color: wheat;
     position: relative;
     justify-content: center;
+    text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -292,6 +297,9 @@ span {
         position: relative;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        position: relative;
+        justify-content: center;
     }
 
     .inicio::before { 
@@ -304,6 +312,7 @@ span {
         color: wheat;
         position: relative;
         justify-content: center;
+        grid-row-start: 2;
     }
 }
 
