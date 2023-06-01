@@ -1,3 +1,14 @@
+// Cambia la imagen de fondo cada vez que se actualice la página:
+document.addEventListener("DOMContentLoaded", function() {
+    var backgrounds = ["../build/img/altiplanos_coralinos.webp", "../build/img/arroyo_escarcha.webp", "../build/img/bosque_primigenio.webp", "../build/img/valle_putrefacto.webp", "../build/img/yermo_agujas.webp"]; // Reemplaza con los nombres de tus imágenes
+  
+    var randomIndex = Math.floor(Math.random() * backgrounds.length);
+    var selectedBackground = backgrounds[randomIndex];
+    var backgroundElement = document.getElementById("inicio");
+    backgroundElement.style.backgroundImage = "url('" + selectedBackground + "')";
+  });
+  
+
 // Codigo para hacer Slider automatico y con controles manuales
 let imagenes = [
     "build/img/great jagras.webp",

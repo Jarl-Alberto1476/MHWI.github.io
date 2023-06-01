@@ -1,5 +1,4 @@
 //validaciones de formularios
-const nombre = document.getElementById("busqueda");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
 const form = document.getElementById("form");

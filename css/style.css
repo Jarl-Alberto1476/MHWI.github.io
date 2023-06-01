@@ -75,16 +75,8 @@ h3 {
 }
 
 body {
-    /* width: 100%;
-    height: 0;
-    padding-bottom: 50%; /* Ajusta el valor según tus necesidades */
-    /*background-image: url('../build/img/BGI_MHW.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.5); /* Aquí puedes ajustar la opacidad */
+    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
 }
-
-
 
 /* Escudo Logo */
 .logo__Escudo {
@@ -199,10 +191,11 @@ span {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
 }
 
 .navegacion a {
-    color: black;
+    color: #efefef;
     font-family: var(--titulo);
 }
 
@@ -265,6 +258,52 @@ span {
     .boton3:hover {
         background: #318aac;
         color: black !important;
+    }
+}
+
+
+.inicio {
+    background-image: url('../build/img/BGI_MHW.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 85%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.inicio::before { 
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+.inicio__info{
+    color: wheat;
+    position: relative;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .inicio {
+        height: 100vh;
+        background-image: url('../build/img/BGI_MHW.webp');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inicio::before { 
+        position: absolute;
+        content: "";
+        inset: 0;
+        background-color: rgba(0, 0, 0, .7);
+    }
+    .inicio__info{
+        color: wheat;
+        position: relative;
+        justify-content: center;
     }
 }
 
@@ -479,8 +518,6 @@ span {
     gap: 3rem;
 }
 
-.form__label {}
-
 .form__input {
     width: 100%;
     height: 45px;
@@ -517,10 +554,6 @@ form::placeholder {
     transition: all .5 ease;
 }
 
-.enviar:hover {
-    /*background: ; */
-}
-
 .alerta {
     width: 100%;
     text-align: center;
@@ -542,7 +575,7 @@ form::placeholder {
 }
 
 .grupo__1 {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: auto;
     display: grid;
@@ -576,17 +609,19 @@ form::placeholder {
     font-size: 3.5rem;
     border-radius: 30%;
 }
-.red__social a:hover { 
+
+.red__social a:hover {
     color: #DC5909;
 }
 
-.grupo__2{
+.grupo__2 {
     background-color: #0a1a2a;
     padding: 1.5rem 1rem;
     text-align: center;
-    color: #fff;   
+    color: #fff;
 }
-.grupo__2 small { 
+
+.grupo__2 small {
     font-size: 1.8rem;
 }
 
@@ -600,4 +635,4 @@ form::placeholder {
         gap: 5rem;
         padding: 4.5rem 0;
     }
-} 
+}
