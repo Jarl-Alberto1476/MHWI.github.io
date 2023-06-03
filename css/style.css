@@ -45,7 +45,7 @@ a {
 
 img {
     max-width: 100%;
-    
+
 }
 
 h1 {
@@ -88,7 +88,7 @@ body {
     align-items: center;
 }
 
-.logo { 
+.logo {
     width: 60%;
     display: flex;
     justify-content: center;
@@ -96,13 +96,13 @@ body {
 }
 
 @media (min-width: 768px) {
-    .logo { 
+    .logo {
         width: 35%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-} 
+}
 
 .titulo {
     font-family: var(--titulo);
@@ -275,13 +275,14 @@ span {
     grid-template-columns: repeat(1, 1fr);
 }
 
-.inicio::before { 
+.inicio::before {
     position: absolute;
     content: "";
     inset: 0;
     background-color: rgba(0, 0, 0, .7);
 }
-.inicio__info{
+
+.inicio__info {
     color: wheat;
     position: relative;
     justify-content: center;
@@ -302,13 +303,14 @@ span {
         justify-content: center;
     }
 
-    .inicio::before { 
+    .inicio::before {
         position: absolute;
         content: "";
         inset: 0;
         background-color: rgba(0, 0, 0, .7);
     }
-    .inicio__info{
+
+    .inicio__info {
         color: wheat;
         position: relative;
         justify-content: center;
@@ -416,7 +418,7 @@ span {
     }
 
     .desktop {
-        display:block;
+        display: block;
         text-align: center;
         justify-content: space-between;
         align-items: center;
@@ -589,15 +591,16 @@ form::placeholder {
     grid-template-columns: repeat(1, 1fr);
     gap: 2.5rem;
     padding: 4.5rem 0;
-} 
-
-.box picture { 
-   width: 100%;
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center; 
 }
+
+.box picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .box h2 {
     color: #fff;
     margin-bottom: 2.5rem;
@@ -651,3 +654,52 @@ form::placeholder {
     }
 
 }
+
+/* Monster Informacion */
+.monstruo__container { 
+    align-content: center;
+}
+
+.informacion__monster { 
+    margin: 0 1rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+#imagenContainer { 
+    max-width: 90%;
+}
+
+.elemento { 
+    padding: 0.8rem;
+}
+
+@media (min-width: 768px) {
+    .informacion__monster { 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+    }
+    #imagenContainer { 
+        width: 60%;
+        justify-content: center; /* Centra horizontalmente el contenido */
+        align-items: center; /* Centra verticalmente el contenido */
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .info__text { 
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .elemento { 
+        padding: 1rem;
+    }
+
+    
+    
+} 
