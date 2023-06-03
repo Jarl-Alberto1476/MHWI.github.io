@@ -1,56 +1,30 @@
-const input = document.querySelector('input'); //seleccionas el input
-const button = document.querySelector('button'); //seleccionas el boton
-const nombreMonster = document.querySelector('#nombreMonstruo'); //selecciona el elemento a modificar
-const especieMonster = document.querySelector('#especie');
-const descMonster = document.querySelector('#desc');
-const monsterContainer = document.querySelector('.monstruo__container'); //seleccionas el contenedor donde aparecera la info 
-const verMasBtn = document.getElementById('verMasBtn');
+const form = document.querySelector('#formbusq');
+const input = document.querySelector('#busqueda');
+const alerta = document.querySelector('#alerta');
 
-input.addEventListener('input', (e) => { //evento para que el contenido del input siempre este en minuscula
-  var inputValue = e.target.value;
-  e.target.value = inputValue.toLowerCase();
+input.addEventListener('input', (e) => {
+    var inputValue = e.target.value;
+    e.target.value = inputValue.toLowerCase();
 });
 
-
-button.addEventListener('click', (e) => { //Creas el evento para que reciba el valor que quieras y lo busque en la API
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     const monstruo = input.value;
-    traerMonstruo(monstruo);
-    guardarNombreMonstruo(monstruo);
-})
 
-function guardarNombreMonstruo(nombre) { //se guarda en la sesion el valor del input
-    sessionStorage.setItem('nombreMonstruo', nombre);
-}
-
-function traerMonstruo(monstruo) {
-    fetch(`https://mhw-db.com/monsters?q={"name":"${monstruo}"}`) //accedes a la API con el nombre que ingresas en el input
-        .then(res => res.json()) //Conviertes la info de la API en un JSON
+    fetch(`https://mhw-db.com/monsters?q={"name":"${monstruo}"}`)
+        .then(response => response.json())
         .then(data => {
-            data.forEach(monstruo => { //iteracion por cada posicion del array
-                //cambio de valor de elementos que se insertaran en el HTML
-                nombreMonster.innerHTML = `Nombre: ${monstruo?.name}`;
-                especieMonster.innerHTML = `Especie: ${monstruo?.species}`;
-                descMonster.innerHTML = `Descripción: ${monstruo?.description}`;
-                monsterContainer.appendChild(nombreMonster); //añadir al contenedor
-                monsterContainer.appendChild(especieMonster);
-                monsterContainer.appendChild(descMonster);
-            })
+            // Verificar si se encontró algún monstruo
+            if (data.length > 0) {
+                const nombreMonstruo = data[0].name;
+                // Redirigir a la página de detalles del monstruo pasando el nombre como parámetro en la URL
+                window.location.href = `monsterInfo.html?nombre=${nombreMonstruo}`;
+            } else {
+                alerta.textContent = 'Monstruo no encontrado';
+            }
         })
-        .catch(err => console.log(err));
-}
-
-const verDetallesBtn = document.getElementById('verMasBtn'); 
-verDetallesBtn.addEventListener('click', function(event) { //Funcion para enviar la informacion a la otra pagina
-    event.preventDefault();
-  
-    const nombreMonstruo = sessionStorage.getItem('nombreMonstruo');
-  
-    // Redirigir a la página de detalles del monstruo pasando el nombre como parámetro en la URL
-    window.location.href = `monsterInfo.html?nombre=${nombreMonstruo}`;
+        .catch(error => {
+            alerta.textContent = 'Error al realizar la búsqueda';
+            console.error(error);
+        });
 });
-
-
-
-
-
