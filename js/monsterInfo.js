@@ -9,7 +9,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const nombreMonstruo = urlParams.get("nombre");
 
 // Construye la URL de la imagen basada en el nombre del monstruo
-const imagenUrl = `build/img/${nombreMonstruo}.jpg`;
+const imagenUrl = `build/img/${nombreMonstruo}.webp`;
 
 // Crea el elemento de imagen y establece la URL
 const imagen = document.createElement("img");
