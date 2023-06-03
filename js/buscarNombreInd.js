@@ -7,8 +7,8 @@ const monsterContainer = document.querySelector('.monstruo__container'); //selec
 const verMasBtn = document.getElementById('verMasBtn');
 
 input.addEventListener('input', (e) => { //evento para que el contenido del input siempre este en minuscula
-  var inputValue = e.target.value;
-  e.target.value = inputValue.toLowerCase();
+    const inputValue = e.target.value.toLowerCase();
+    e.target.value = inputValue;
 });
 
 sessionStorage.clear();
@@ -50,11 +50,9 @@ function traerMonstruo(monstruo) {
 
 
 const verDetallesBtn = document.getElementById('verMasBtn'); 
-verDetallesBtn.addEventListener('click', function(event) { //Funcion para enviar la informacion a la otra pagina
-    event.preventDefault();
-  
+verDetallesBtn.addEventListener('click', (e) => { //Funcion para enviar la informacion a la otra pagina
+    e.preventDefault();
     const nombreMonstruo = sessionStorage.getItem('nombreMonstruo');
-  
     // Redirigir a la página de detalles del monstruo pasando el nombre como parámetro en la URL
     window.location.href = `monsterInfo.html?nombre=${nombreMonstruo}`;
 });
