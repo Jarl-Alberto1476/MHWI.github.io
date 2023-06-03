@@ -6,6 +6,12 @@ const descMonster = document.querySelector('#desc');
 const monsterContainer = document.querySelector('.monstruo__container'); //seleccionas el container donde aparecera la info 
 const verMasBtn = document.getElementById('verMasBtn');
 
+input.addEventListener('input', (e) => { //evento para que el contenido del input siempre este en minuscula
+  var inputValue = e.target.value;
+  e.target.value = inputValue.toLowerCase();
+});
+
+
 button.addEventListener('click', (e) => { //Creas el evento para que reciba el valor que quieras y lo busque en la API
     e.preventDefault();
     const monstruo = input.value;
