@@ -3,7 +3,7 @@ const button = document.querySelector('button'); //seleccionas el boton
 const nombreMonster = document.querySelector('#nombreMonstruo'); //selecciona el elemento a modificar
 const especieMonster = document.querySelector('#especie');
 const descMonster = document.querySelector('#desc');
-const monsterContainer = document.querySelector('.monstruo__container'); //seleccionas el container donde aparecera la info 
+const monsterContainer = document.querySelector('.monstruo__container'); //seleccionas el contenedor donde aparecera la info 
 const verMasBtn = document.getElementById('verMasBtn');
 
 input.addEventListener('input', (e) => { //evento para que el contenido del input siempre este en minuscula
@@ -19,7 +19,7 @@ button.addEventListener('click', (e) => { //Creas el evento para que reciba el v
     guardarNombreMonstruo(monstruo);
 })
 
-function guardarNombreMonstruo(nombre) {
+function guardarNombreMonstruo(nombre) { //se guarda en la sesion el valor del input
     sessionStorage.setItem('nombreMonstruo', nombre);
 }
 
@@ -40,8 +40,8 @@ function traerMonstruo(monstruo) {
         .catch(err => console.log(err));
 }
 
-const verDetallesBtn = document.getElementById('verMasBtn');
-verDetallesBtn.addEventListener('click', function(event) {
+const verDetallesBtn = document.getElementById('verMasBtn'); 
+verDetallesBtn.addEventListener('click', function(event) { //Funcion para enviar la informacion a la otra pagina
     event.preventDefault();
   
     const nombreMonstruo = sessionStorage.getItem('nombreMonstruo');
@@ -49,6 +49,8 @@ verDetallesBtn.addEventListener('click', function(event) {
     // Redirigir a la página de detalles del monstruo pasando el nombre como parámetro en la URL
     window.location.href = `monsterInfo.html?nombre=${nombreMonstruo}`;
 });
+
+
 
 
 

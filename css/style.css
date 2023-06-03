@@ -29,10 +29,9 @@ html {
 }
 
 p {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-family: var(--especie);
     font-weight: 500;
-    color: var(--primario);
 }
 
 span {
@@ -60,6 +59,11 @@ h3 {
     font-size: 1.6rem;
 }
 
+ul { 
+    list-style: none;
+    font-size: 2.1rem;
+}
+
 @media (min-width: 768px) {
     h1 {
         font-size: 4rem;
@@ -72,6 +76,12 @@ h3 {
     h3 {
         font-size: 2.4rem;
     }
+
+    ul { 
+    list-style: none;
+    font-size: 2.4rem;
+}
+
 }
 
 body {
@@ -287,6 +297,7 @@ span {
     position: relative;
     justify-content: center;
     text-align: left;
+    
 }
 
 @media (min-width: 768px) {
@@ -393,12 +404,14 @@ span {
 /* Listado de Monstruos */
 .listado__sect {
     text-align: center;
-    margin: 4rem;
+    margin: 3rem;
 }
 
 .listado__monstruos {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .mobile {
@@ -677,6 +690,8 @@ form::placeholder {
     padding: 0.8rem;
 }
 
+
+
 @media (min-width: 768px) {
     .informacion__monster { 
         display: grid;
@@ -699,7 +714,5 @@ form::placeholder {
     .elemento { 
         padding: 1rem;
     }
-
-    
-    
+  
 } 
