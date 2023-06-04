@@ -303,6 +303,7 @@ span {
 @media (min-width: 768px) {
     .inicio {
         height: 100vh;
+        width: 100%;
         background-image: url('../build/img/BGI_MHW.webp');
         background-size: cover;
         background-position: center;
@@ -322,6 +323,7 @@ span {
     }
 
     .inicio__info {
+        width: 100%;
         color: wheat;
         position: relative;
         justify-content: center;
@@ -360,6 +362,7 @@ span {
 
 .slider__inner img {
     width: 100%;
+    
 }
 
 
